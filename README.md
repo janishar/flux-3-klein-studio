@@ -21,6 +21,10 @@ licensed** — see [License](#license).
 [![Code: MIT](https://img.shields.io/badge/Code-MIT-yellow.svg)](#license)
 [![Weights: FLUX Kommunity](https://img.shields.io/badge/Weights-FLUX%20Kommunity-orange.svg)](#license)
 
+<p align="center">
+  <img src="docs/screenshot-1.webp" alt="flux klein studio running inside helmstudio: an edit of a corgi playing guitar with the prompt 'make it night under a full moon in @take…', the upsampler on and the ratio on Auto, following the first image at 1248×832, on the left; the edited take under a full moon in the centre preview, its five render stages and the upsampled prompt beneath; the reference image, the queue and the render log on the right, with the session's two takes at the bottom" width="90%">
+</p>
+
 ## Table of contents
 
 - [Requirements](#requirements) · [Weights](#weights)
@@ -141,10 +145,9 @@ git clone https://github.com/janishar/helmstudio && cd helmstudio && make build 
 
 Then open **http://127.0.0.1:8700**; everything lives in `~/.helmstudio`.
 
-**2. Add flux klein studio to its library.** It is not in helmstudio's registry, so
-use **Add a studio** with `https://github.com/janishar/flux-3-klein-studio`.
-Install shows every command it will run — `uv sync --locked` — and the two weights
-it will fetch, about 40 GB. Accept the Klein licence on Hugging Face first:
+**2. Install flux klein studio from its library.** It is in helmstudio's registry,
+so it is already listed. Install shows every command it will run — `uv sync --locked`
+— and the two weights it will fetch, about 40 GB, or link the ones you have. Accept the Klein licence on Hugging Face first:
 helmstudio asks for a token when a gated weight needs one.
 
 **3. Start it.** The launcher gives the studio a port and the weights' paths,
