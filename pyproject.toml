@@ -1,0 +1,30 @@
+[project]
+name = "flux-3-klein"
+version = "0.1.0"
+description = "FLUX 3 Image Klein text-to-image and multi-image editing, with its prompt upsampler, and a helmstudio web studio"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Janishar Ali", email = "janishar.ali@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "accelerate>=1.15.0",
+    "diffusers",
+    "helm-runtime-sdk>=1.0.0rc1,<2",
+    "pillow>=12.3.0",
+    "torch>=2.14.0",
+    "torchvision>=0.29.0",
+    "transformers>=5.17.0",
+]
+
+[project.scripts]
+flux-3-klein = "flux_3_klein:main"
+
+[build-system]
+requires = ["uv_build>=0.12.17,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.sources]
+diffusers = { git = "https://github.com/huggingface/diffusers" }
